@@ -20,8 +20,8 @@ describe("login page", () => {
       cy.get('[data-cy="submit-button"]')
         .contains("LOGIN")
         .should("be.visible")
-          .click();
-        cy.location("pathname").should("eq", "/dash");
+        .click();
+      cy.location("pathname").should("eq", "/dash");
     });
   });
 });
