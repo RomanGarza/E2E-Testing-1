@@ -1,10 +1,15 @@
+// Description:
+
+// Login page is the gateway to MyAccount, Enroll, and Forgot Username/Password.
+
+
 describe('visit myaccount login page', () => {
   beforeEach(() => {
     cy.visit("https://myaccount.unionallinone.com/");
   })
 
 
-  context("Each button should direct the user to a new page", () => {
+  context("Login Page", () => {
 
     it("ATM locations button", () => {
       cy.get('[data-cy="login--locations-button"] > .v-btn__content')
@@ -59,3 +64,10 @@ describe('visit myaccount login page', () => {
     });
   })
 })
+
+
+// Expected results:
+
+// Each button should direct the user to a new page of Enroll or Recover.
+// Entering invalid credentials should result in an error message that the user can not log in with provided info.
+// Entering valid credentials should result in the user being taken to the MyAccount Dashboard.
